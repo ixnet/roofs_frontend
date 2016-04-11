@@ -1,3 +1,6 @@
 Django==1.9.5
 django-crispy-forms==1.6.0
 django-model-utils==2.4
+lorem-ipsum-generator==0.3
+six==1.10.0
+transliterate==1.7.6
