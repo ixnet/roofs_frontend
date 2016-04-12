@@ -1,1 +1,27 @@
-/*! project specific CSS goes here. */
+body {
+    font-family: 'Jura', sans-serif;
+    font-size:13px;
+    
+}
+
+.nebody {
+        margin-left:-8px;
+        background:url('http://avatanplus.com/files/resources/mid/56abae8d23bae1528ea1d75a.png');
+        background-position: 0% 50%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+        
+.l404 {
+    background-position: 20% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-size:380px;
+    text-align: center;
+    font-weight: bold;
+    margin-top:100px;
+    color:#009900;
+    
+}
+
+
