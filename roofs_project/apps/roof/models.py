@@ -8,9 +8,9 @@ from .choices import *
 class Roof(models.Model):
     title = models.CharField(max_length=30)
     slug = models.SlugField(max_length=40)
-    metro = models.CharField(max_length=30)
+    metro = models.CharField(max_length=30, choices=METRO_CHOICES)
     street = models.CharField(max_length=30)
-    number = models.PositiveSmallIntegerField()  # TODO: literals
+    number = models.CharField(max_length=10)
     porch = models.PositiveSmallIntegerField()
     floor = models.PositiveSmallIntegerField()
     complexity = models.IntegerField(choices=COMPLEXITY_CHOICES, default=1)

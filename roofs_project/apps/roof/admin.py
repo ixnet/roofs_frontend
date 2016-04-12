@@ -7,7 +7,7 @@ class RoofAdmin(admin.ModelAdmin):
     # Display:
     list_display = ['__str__', 'metro', 'address', 'created']
     search_fields = ['title', 'metro', 'street', 'description']
-    list_filter = ['created', 'complexity', 'slope', 'metro']
+    list_filter = ['created', 'complexity', 'slope']
 
     # Create:
     radio_fields = {'complexity': admin.HORIZONTAL, 'slope': admin.HORIZONTAL}

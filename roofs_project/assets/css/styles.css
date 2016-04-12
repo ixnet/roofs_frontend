@@ -1,7 +1,7 @@
 body {
     font-family: 'Jura', sans-serif;
     font-size:13px;
-    
+
 }
 
 .nebody {
@@ -11,7 +11,7 @@ body {
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
-        
+
 .l404 {
     background-position: 20% 50%;
     background-attachment: fixed;
@@ -21,7 +21,5 @@ body {
     font-weight: bold;
     margin-top:100px;
     color:#009900;
-    
+
 }
-
-
