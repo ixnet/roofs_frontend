@@ -11,7 +11,7 @@ class Roof(models.Model):
     slug = models.SlugField(max_length=40)
     metro = models.CharField(max_length=30, choices=METRO_CHOICES)
     street = models.CharField(max_length=30)
-    number = models.CharField(max_length=5)
+    number = models.PositiveSmallIntegerField()
     building = models.CharField(max_length=5)
     porch = models.PositiveSmallIntegerField()
     floor = models.PositiveSmallIntegerField()
@@ -38,4 +38,3 @@ class Roof(models.Model):
         return self.title
 
     # TODO: obtaining coordinates
-    # TODO: number and building. literals or not?
