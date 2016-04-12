@@ -5,8 +5,9 @@ COMPLEXITY_CHOICES = (
 )
 
 SLOPE_CHOICES = (
-    (1, ("Пологая")),
-    (2, ("Крутая"))
+    (1, ("Плоская")),
+    (2, ("Наклонная")),
+    (3, ("Чердак"))
 )
 
 # TODO: METRO list choices
