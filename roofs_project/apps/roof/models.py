@@ -10,7 +10,7 @@ class Roof(models.Model):
     slug = models.SlugField(max_length=40)
     metro = models.CharField(max_length=30, choices=METRO_CHOICES)
     street = models.CharField(max_length=30)
-    number = models.CharField(max_length=10)
+    number = models.CharField(max_length=5)
     porch = models.PositiveSmallIntegerField()
     floor = models.PositiveSmallIntegerField()
     complexity = models.IntegerField(choices=COMPLEXITY_CHOICES, default=1)

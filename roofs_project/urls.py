@@ -5,6 +5,7 @@ from django.contrib import admin
 from roof import views
 
 urlpatterns = [
-    url(r'^', include('roof.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^', include('roof.urls')),
+
 ]

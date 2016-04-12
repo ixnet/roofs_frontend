@@ -5,7 +5,7 @@ from .models import Roof
 @admin.register(Roof)
 class RoofAdmin(admin.ModelAdmin):
     # Display:
-    list_display = ['__str__', 'metro', 'address', 'created']
+    list_display = ['__str__', 'slug', 'metro', 'address', 'created']
     search_fields = ['title', 'metro', 'street', 'description']
     list_filter = ['created', 'complexity', 'slope']
 

@@ -1,5 +1,25 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% block title %}
+  {{ title }}
+{% endblock title %}
 
 {% block content %}
-    <h1>List</h1>
+  {% for roof in list %}
+    <div class="container">
+      <div class="row">
+        <a href="{% url 'roof:detail' slug=roof.slug %}"><h1>{{ roof.title }}</h1></a>
+        Крыша добвлена: {{ roof.created }}<br/>
+        Последнее изменение: {{ roof.updated }}<hr/>
+        Метро: {{ roof.metro }}<br/>
+        Адрес: {{ roof.address}}<br/><hr/>
+        Сложность: {{ roof.complexity }}<br/>
+        Тип крыши: {{ roof.slope }}<br/><hr/>
+        <h3>Описание:</h3>
+        <p>{{ roof.description }}</p>
+        <h3>Путь:</h3>
+        <p>{{ roof.route }}</p>
+      </div>
+    </div>
+  {% endfor %}
 {% endblock content %}
