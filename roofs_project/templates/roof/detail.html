@@ -5,6 +5,7 @@
 {% block content %}
   <div class="container">
     <div class="row">
+      <h1>{{ roof.title }}</h1>
       Крыша добвлена: {{ roof.created }}<br/>
       Последнее изменение: {{ roof.updated }}<hr/>
       Метро: {{ roof.metro }}<br/>
@@ -17,6 +18,4 @@
       <p>{{ roof.route }}</p>
     </div>
   </div>
-{% endblock %}
-
 {% endblock content %}
