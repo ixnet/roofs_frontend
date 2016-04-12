@@ -13,5 +13,5 @@ class RoofAdmin(admin.ModelAdmin):
     radio_fields = {'complexity': admin.HORIZONTAL, 'slope': admin.HORIZONTAL}
     fieldsets = (
         ('Общая информация', {'fields': ['title', 'complexity', 'slope']}),
-        ('Адрес', {'fields': ['metro', 'street', 'number', 'porch', 'floor']}),
+        ('Адрес', {'fields': ['metro', 'street', 'number', 'building', 'porch', 'floor']}),
         ('Описание', {'fields': ['description', 'route']}))
