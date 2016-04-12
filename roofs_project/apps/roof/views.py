@@ -1,12 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import Http404
 
 from roof.models import Roof
-
-
-def l404(request):
-    return render(request,
-                  "404.html")
 
 
 def index(request):

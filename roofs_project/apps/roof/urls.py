@@ -12,6 +12,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^roofs/$', views.list, name='list'),
     url(r'^(?P<slug>[\w-]+)/$', views.detail, name='detail'),
-    url(r'^404/$', views.l404, name='404'),
 
 ]
