@@ -1,4 +1,11 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
     font-family: 'Jura', sans-serif;
     font-size:13px;
 
@@ -6,7 +13,7 @@ body {
 
 .nebody {
         margin-left:-8px;
-        background:url('http://avatanplus.com/files/resources/mid/56abae8d23bae1528ea1d75a.png');
+        background:url('404_doge.png');
         background-position: 0% 50%;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -22,4 +29,17 @@ body {
     margin-top:100px;
     color:#009900;
 
+}
+
+.navbar-fixed-top {
+    position:inherit !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: grey;
 }
