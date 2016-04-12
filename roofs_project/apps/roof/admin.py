@@ -15,5 +15,3 @@ class RoofAdmin(admin.ModelAdmin):
         ('Общая информация', {'fields': ['title', 'complexity', 'slope']}),
         ('Адрес', {'fields': ['metro', 'street', 'number', 'porch', 'floor']}),
         ('Описание', {'fields': ['description', 'route']}))
-
-# TODO: View on site -> ModelAdmin.view_on_site

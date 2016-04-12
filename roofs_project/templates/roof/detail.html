@@ -1,5 +1,21 @@
 {% extends 'base.html' %}
 
+{% block title %}{{ roof.title }}{% endblock title %}
+
 {% block content %}
-    <h1>Detail</h1>
+  <div class="container">
+    <div class="row">
+      <h1>{{ roof.title }}</h1>
+      Крыша добвлена: {{ roof.created }}<br/>
+      Последнее изменение: {{ roof.updated }}<hr/>
+      Метро: {{ roof.metro }}<br/>
+      Адрес: {{ roof.address}}<br/><hr/>
+      Сложность: {{ roof.complexity }}<br/>
+      Тип крыши: {{ roof.slope }}<br/><hr/>
+      <h3>Описание:</h3>
+      <p>{{ roof.description }}</p>
+      <h3>Путь:</h3>
+      <p>{{ roof.route }}</p>
+    </div>
+  </div>
 {% endblock content %}

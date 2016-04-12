@@ -1,12 +1,13 @@
 from django.db import models
 from django.utils.text import slugify
 from transliterate import translit
+from django.core.urlresolvers import reverse
 
 from .choices import *
 
 
 class Roof(models.Model):
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=30, unique=True)
     slug = models.SlugField(max_length=40)
     metro = models.CharField(max_length=30, choices=METRO_CHOICES)
     street = models.CharField(max_length=30)
@@ -25,10 +26,13 @@ class Roof(models.Model):
     def address(self):
         return '{0}, {1}, корпус {2}, подъезд {3}, этаж {4}'.format(self.street, self.number, self.building, self.porch, self.floor)
 
-    # TODO: slug improvements, if title is not unique
     def save(self, *args, **kwargs):
         self.slug = slugify(translit(self.title, reversed=True), allow_unicode=True)
         super(Roof, self).save(*args, **kwargs)
+
+    # View on site link from Admin
+    def get_absolute_url(self):
+        return reverse('roof:detail', args=[str(self.slug)])
 
     def __str__(self):
         return self.title
