@@ -26,10 +26,10 @@
             Тип крыши: {{ roof.slope }}<br/>
             Этаж: {{ roof.floor }} <br/>
             Последнее изменение: {{ roof.updated }}<br/><hr/>
-            Описание: {{ roof.description|linebreaks }}
+            Описание: {{ roof.description|safe }}
           </div>
           <div class="tab-pane" id="tab2">
-            Маршрут: {{ roof.route }}
+            Маршрут: {{ roof.route|safe }}
           </div>
           <div class="tab-pane" id="tab3">
             
