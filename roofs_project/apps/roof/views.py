@@ -24,7 +24,7 @@ def list(request):
     return render(request,
                   "roof/list.html",
                   {'list': queryset,
-                   'title': 'Спиоск крыш'}
+                   'title': 'Список крыш'}
                   )
 
 

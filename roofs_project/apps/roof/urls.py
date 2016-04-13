@@ -10,7 +10,9 @@ app_name = 'roof'
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^roofs$', views.list, name='list'),
-    url(r'^(?P<slug>[\w-]+)$', views.detail, name='detail'),
+    url(r'^roofs/$', views.list, name='list'),
+    url(r'^(?P<slug>[\w-]+)/$', views.detail, name='detail'),
 
 ]
+
+# TODO: paginator urls like: "../roofs/2/"
