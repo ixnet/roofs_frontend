@@ -11,6 +11,7 @@ app_name = 'roof'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^roofs/$', views.list, name='list'),
+     url(r'^banner/$', views.banner, name='banner'),
     url(r'^(?P<slug>[\w-]+)/$', views.detail, name='detail'),
 
 ]
