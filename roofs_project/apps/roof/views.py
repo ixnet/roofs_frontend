@@ -10,8 +10,8 @@ def index(request):
 
 def list(request):
     queryset_list = Roof.objects.all()
-    # TODO: 10 roofs per page
-    paginator = Paginator(queryset_list, 3)
+    # FIXME: 10 roofs per page
+    paginator = Paginator(queryset_list, 2)
     page = request.GET.get('page')
 
     try:

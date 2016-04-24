@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 from transliterate import translit
 from django.core.urlresolvers import reverse
+from filer.fields.image import FilerImageField
 
 from .choices import *
 
@@ -15,6 +16,7 @@ class Roof(models.Model):
     building = models.CharField(max_length=5)
     porch = models.PositiveSmallIntegerField()
     floor = models.PositiveSmallIntegerField()
+    image = FilerImageField(null=True, blank=True, related_name='Крыша')
     complexity = models.CharField(max_length=10, choices=COMPLEXITY_CHOICES)
     slope = models.CharField(max_length=10, choices=SLOPE_CHOICES)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
@@ -36,5 +38,3 @@ class Roof(models.Model):
 
     def __str__(self):
         return self.title
-
-    # TODO: obtaining coordinates

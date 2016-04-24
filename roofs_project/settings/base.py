@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Third-party apps:
+    'easy_thumbnails',
+    'filer',
+    'mptt',
     # My apps:
     'roof',
 ]
@@ -103,6 +106,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
+
+
 # Internationalization
 
 LANGUAGE_CODE = 'ru-RU'
@@ -115,10 +126,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Djang-filer
+THUMBNAIL_HIGH_RESOLUTION = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "assets")]
 
@@ -126,4 +139,4 @@ STATIC_URL = '/assets/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
