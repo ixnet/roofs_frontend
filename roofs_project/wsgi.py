@@ -11,7 +11,7 @@ SITE_ROOT = dirname(dirname(abspath(__file__)))
 path.append(SITE_ROOT)
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roof.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roofs_project.settings")
 
 
 from django.core.wsgi import get_wsgi_application
