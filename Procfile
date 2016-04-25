@@ -1,1 +1,1 @@
-web: gunicorn roofs_project.wsgi
+web: gunicorn --pythonpath roofs_project roofs_project.wsgi --log-file -
