@@ -11,9 +11,9 @@ app_name = 'roof'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^roofs/$', views.list, name='list'),
-     url(r'^banner/$', views.banner, name='banner'),
+    url(r'^banner/$', views.banner, name='banner'),
     url(r'^(?P<slug>[\w-]+)/$', views.detail, name='detail'),
 
 ]
 
-# TODO: paginator urls like: "../roofs/2/"
+# FIXME: paginator urls like: "../roofs/2/"

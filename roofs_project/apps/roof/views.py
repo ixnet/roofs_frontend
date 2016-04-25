@@ -7,9 +7,11 @@ def index(request):
     return render(request,
                   "roof/index.html")
 
+
 def banner(request):
     return render(request,
                   "roof/banner.html")
+
 
 def list(request):
     queryset_list = Roof.objects.all()
