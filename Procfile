@@ -1,1 +1,1 @@
-web: gunicorn roofs_project.wsgi
+web: gunicorn roofs_project.wsgi --log-file -
